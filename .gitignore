@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Java / Spring Boot
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Environment files
+.env
+.env.local
+application-local.properties
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
