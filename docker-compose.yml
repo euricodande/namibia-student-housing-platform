@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: namibia_housing_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: namibia_housing_db
+      POSTGRES_USER: housing_user
+      POSTGRES_PASSWORD: housing_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
