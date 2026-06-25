@@ -30,7 +30,7 @@ public class LandlordProfile {
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "verification_status", nullable = false, columnDefinition = "landlord_verification_status")
-    private LandlordVerificationStatus verificationStatus;
+    private LandlordVerificationStatus verificationStatus = LandlordVerificationStatus.PENDING;
 
     @Column(name = "business_name", length = 100)
     private String businessName;

@@ -25,7 +25,7 @@ public class AppUser {
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "role", nullable = false, columnDefinition = "user_role")
-    private UserRole role;
+    private UserRole role = UserRole.STUDENT;
 
     @Column(name = "first_name", nullable = false, length = 40)
     private String firstName;
@@ -46,7 +46,7 @@ public class AppUser {
     private String phoneNumber;
 
     @Column(name = "active", nullable = false)
-    private Boolean active;
+    private Boolean active = false;
 
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
