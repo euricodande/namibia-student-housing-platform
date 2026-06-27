@@ -35,6 +35,7 @@ public class Enquiry {
     @Column(name = "message", nullable = false, columnDefinition = "TEXT")
     private String message;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "status", nullable = false, columnDefinition = "enquiry_status")

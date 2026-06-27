@@ -34,11 +34,13 @@ public class MaintenanceRequest {
     @Column(name = "description", nullable = false, columnDefinition = "TEXT")
     private String description;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "priority", nullable = false, columnDefinition = "maintenance_priority")
     private MaintenancePriority priority = MaintenancePriority.LOW;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "status", nullable = false, columnDefinition = "maintenance_status")

@@ -27,6 +27,7 @@ public class LandlordProfile {
     @JoinColumn(name = "user_id", nullable = false, unique = true)
     private AppUser user;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "verification_status", nullable = false, columnDefinition = "landlord_verification_status")

@@ -44,6 +44,7 @@ public class Rental {
     @Column(name = "end_date")
     private LocalDate endDate;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "status", nullable = false, columnDefinition = "rental_status")

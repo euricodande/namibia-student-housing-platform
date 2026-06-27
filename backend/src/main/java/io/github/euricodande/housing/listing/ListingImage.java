@@ -25,6 +25,7 @@ public class ListingImage {
     @Column(name = "image_url", nullable = false, length = 500)
     private String imageUrl;
 
+    @Builder.Default
     @Column(name = "is_primary", nullable = false)
     private Boolean primary = false;
 

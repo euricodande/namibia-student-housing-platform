@@ -22,6 +22,7 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Builder.Default
     @Enumerated(EnumType.STRING)
     @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     @Column(name = "role", nullable = false, columnDefinition = "user_role")
@@ -45,6 +46,7 @@ public class AppUser {
     @Column(name = "phone_number", unique = true, length = 20)
     private String phoneNumber;
 
+    @Builder.Default
     @Column(name = "active", nullable = false)
     private Boolean active = false;
 
